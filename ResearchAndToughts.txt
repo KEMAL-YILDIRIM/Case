@@ -91,12 +91,14 @@ THOUGHTS
 
 -Haven't use castle windsor , signalR and wcf before
 -Didn't know anthing about threading
--Couldn't finished send mail part due to lack of time that may cause trouble because of recipients server limitation
+-Couldn't finished send mail part due to lack of time
+-Haven't use castle and do the testing because of time issue too
 
 +I have learned WCF basics and SignalR
 +Xml parsing is a bit different, had to use agility pack. Can use scheduler for checking the news update
 and attache the mail sending  to update
 +May benefit the use of threading pool queue with the paralelism i don't really know for now if it works
-but benchmarks are overwhelming
-+using a mail server and a seperate WCF project for mail may be much more useful
+but benchmarks are overwhelming.
++using a mail server and a seperate WCF project for mail may be much more useful but
+Mail sending process may cause trouble because of recipients server limitation
 
