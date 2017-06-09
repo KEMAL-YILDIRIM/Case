@@ -1,0 +1,102 @@
+RSS PARSER
+
+-https://www.codeproject.com/Articles/23448/Publishing-RSS-and-ATOM-Feeds-using-WCF-Syndic
+-https://stackoverflow.com/questions/10775535/get-all-rss-links-on-a-website
+-https://stackoverflow.com/questions/24116414/parsing-a-feed-in-c-sharp
+-https://www.velir.com/blog/2011/01/28/building-extensible-rss-parser-c
+-https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj991805.aspx
+-https://code.msdn.microsoft.com/windowsapps/RSS-Reader-affe3358
+>utf8
+-https://stackoverflow.com/questions/18269983/c-sharp-htmlagilitypack-htmldocument-loadhtml-encoding
+
+DATABASE CHANGE LISTEN TRIGGER
+
+-https://hendrikbulens.wordpress.com/2015/04/28/c-firing-code-after-database-changes-with-sqldependency-it/
+-https://stackoverflow.com/questions/7588572/what-are-the-limitations-of-sqldependency
+-https://stackoverflow.com/questions/5288434/how-to-monitor-sql-server-table-changes-by-using-c
+-https://gkulshrestha.wordpress.com/2014/05/02/signalr-with-sql-server-query-notification/
+-http://www.dotnetfunda.com/articles/show/3334/instant-database-changes-using-signalr
+
+>Designing Event Notifications
+-https://msdn.microsoft.com/en-us/library/ms175854.aspx
+
+SIGNALR
+
+-http://signalr.net/
+-https://docs.microsoft.com/en-us/aspnet/signalr/
+-https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc
+-https://recordtablechanges.codeplex.com/
+-http://www.venkatbaggu.com/signalr-database-update-notifications-asp-net-mvc-usiing-sql-dependency/
+-https://github.com/SignalR/SignalR/wiki/SignalR-JS-Client
+
+EMAIL SENDER
+
+there are 3 ways of send mass mails
+1)multi thread(trackless,overprocessing,no error handle backup)
+2)microprocess and parallelization(continuous)
+3)using db with service layer
+-https://stackoverflow.com/questions/5092941/best-approach-to-send-mass-e-mails-through-an-asp-net-webpage
+
+-https://stackoverflow.com/questions/4138405/sending-mass-emails-in-the-background-create-thread-or-use-threadpool
+-https://msdn.microsoft.com/en-us/library/x5x13z6h.aspx
+-https://stackoverflow.com/questions/8696205/multi-threading-to-speed-up-an-email-sending-application
+-https://www.emailarchitect.net/easendmail/kb/csharp.aspx?cat=13
+-https://stackoverflow.com/questions/5101891/how-can-i-send-mailmessages-using-multiple-threads
+-https://talkdotnet.wordpress.com/2014/03/20/sending-bulk-emails-with-tasks-parallel-foreach/
+-http://www.dotnetobject.com/Thread-Send-bulk-emails-with-thread-asp-net
+
+MULTITHREAD
+
+>multithread vs multiprocess
+-https://stackoverflow.com/questions/26313089/performance-issue-a-case-study-comparing-multi-threading-versus-multi-processin
+
+>paralel programming
+-http://www.matlus.com/data-parallel-parallel-programming-in-net/
+
+>Garbage Collector consume huge amount of time because it hasnt got multithread
+-https://stackoverflow.com/questions/13671053/nets-multi-threading-vs-multi-processing-awful-parallel-foreach-performance
+
+-http://codesamplez.com/programming/multithreaded-programming-c-sharp
+-https://stackoverflow.com/questions/449887/sending-e-mail-using-c-sharp
+-https://msdn.microsoft.com/en-us/library/4yd16hza.aspx
+-https://msdn.microsoft.com/library/system.threading.tasks.taskscheduler.aspx#Default
+
+WCF
+
+-https://msdn.microsoft.com/en-us/library/ms731067.aspx
+-https://codeblitz.wordpress.com/2009/03/08/decorator-pattern-with-wcf-and-castle-windsor/
+
+
+
+CASTLE WINDSOR
+
+-https://github.com/castleproject/Windsor/blob/master/docs/
+-http://prideparrot.com/blog/archive/2012/2/dependency_injection_in_wcf_using_castle_windsor
+-http://www.c-sharpcorner.com/UploadFile/f1047f/wcf-service-injection-in-controller-using-castle-windsor/
+-https://github.com/castleproject/Windsor/blob/master/docs/registering-components-one-by-one.md
+
+
+DESIGN
+
+MVC
+-download rss files at app start
+-list downloaded files
+-listen db and notify if changes applied
+
+WCF
+-rss download service
+-mail sender service
+
+THOUGHTS
+
+-Haven't use castle windsor , signalR and wcf before
+-Didn't know anthing about threading
+-Couldn't finished send mail part due to lack of time that may cause trouble because of recipients server limitation
+
++I have learned WCF basics and SignalR
++Xml parsing is a bit different, had to use agility pack. Can use scheduler for checking the news update
+and attache the mail sending  to update
++May benefit the use of threading pool queue with the paralelism i don't really know for now if it works
+but benchmarks are overwhelming
++using a mail server and a seperate WCF project for mail may be much more useful
+
